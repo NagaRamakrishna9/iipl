@@ -1,0 +1,16 @@
+sap.ui.define([
+    "sap/ui/core/mvc/Controller"
+], function (Controller) {
+    "use strict";
+
+    return Controller.extend("demo.app.controller.App", {
+
+        onPress: function () {
+
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("rfqDetails");
+
+        }
+
+    });
+});

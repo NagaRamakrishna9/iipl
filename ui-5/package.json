@@ -1,0 +1,12 @@
+{
+  "name": "ui5-small-app",
+  "version": "1.0.0",
+  "description": "Small SAPUI5 project",
+  "private": true,
+  "scripts": {
+    "start": "ui5 serve -o index.html"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3.0.0"
+  }
+}

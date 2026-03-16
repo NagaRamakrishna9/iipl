@@ -3,10 +3,20 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-    <App>
-        <Page title="My First UI5 App">
-            <Button text="Click Me" press="onPress"/>
+    <App id="app">
+
+        <Page title="RFQ List">
+
+            <content>
+
+                <Button
+                    text="Open RFQ Details"
+                    press="onPress"/>
+
+            </content>
+
         </Page>
+
     </App>
 
 </mvc:View>

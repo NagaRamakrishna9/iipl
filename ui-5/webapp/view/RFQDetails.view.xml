@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="demo.app.controller.RFQDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page
+        title="RFQ Details"
+        showNavButton="true"
+        navButtonPress="onNavBack">
+
+        <content>
+
+            <VBox>
+
+                <Title text="RFQ Information"/>
+
+                <Text text="RFQ Number: 4500000012"/>
+
+                <Text text="Supplier: ABC Supplier"/>
+
+                <Text text="Status: Open"/>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>

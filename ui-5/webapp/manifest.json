@@ -1,24 +1,18 @@
 {
-  "_version": "1.32.0",
+  "_version": "1.65.0",
+
   "sap.app": {
     "id": "demo.app",
     "type": "application",
-    "title": "Demo App",
-    "applicationVersion": {
-      "version": "1.0.0"
-    }
+    "title": "RFQ Demo"
   },
 
   "sap.ui": {
-    "technology": "UI5",
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
+    "technology": "UI5"
   },
 
   "sap.ui5": {
+
     "rootView": {
       "viewName": "demo.app.view.App",
       "type": "XML",
@@ -30,6 +24,40 @@
       "minUI5Version": "1.120",
       "libs": {
         "sap.m": {}
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "demo.app.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+
+      "routes": [
+        {
+          "pattern": "",
+          "name": "main",
+          "target": "main"
+        },
+        {
+          "pattern": "rfqDetails",
+          "name": "rfqDetails",
+          "target": "rfqDetails"
+        }
+      ],
+
+      "targets": {
+        "main": {
+          "viewName": "App"
+        },
+
+        "rfqDetails": {
+          "viewName": "RFQDetails"
+        }
       }
     }
   }

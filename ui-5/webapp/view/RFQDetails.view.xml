@@ -1,29 +1,158 @@
 <mvc:View
     controllerName="demo.app.controller.RFQDetails"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap">
 
-    <Page
-        title="RFQ Details"
-        showNavButton="true"
-        navButtonPress="onNavBack">
+<Page
+    title="RFQ Details"
+    showNavButton="true"
+    navButtonPress="onNavBack">
 
-        <content>
+<uxap:ObjectPageLayout
+    id="ObjectPageLayout"
+    showTitleInHeaderContent="true"
+    showHeaderContent="true">
 
-            <VBox>
+    <!-- HEADER -->
 
-                <Title text="RFQ Information"/>
+    <uxap:headerTitle>
 
-                <Text text="RFQ Number: 4500000012"/>
+        <uxap:ObjectPageDynamicHeaderTitle>
 
-                <Text text="Supplier: ABC Supplier"/>
+            <uxap:heading>
+                <Title text="Copy of Reference RFQ"/>
+            </uxap:heading>
 
-                <Text text="Status: Open"/>
+            <uxap:expandedHeading>
+                <Title text="7000000122"/>
+            </uxap:expandedHeading>
 
+        </uxap:ObjectPageDynamicHeaderTitle>
+
+    </uxap:headerTitle>
+
+    <!-- HEADER CONTENT -->
+
+    <uxap:headerContent>
+
+        <HBox>
+
+            <VBox width="250px">
+                <Label text="Created By"/>
+                <Text text="Shankaran Siva"/>
             </VBox>
 
-        </content>
+            <VBox width="250px">
+                <Label text="Status"/>
+                <ObjectStatus text="Published" state="Success"/>
+            </VBox>
 
-    </Page>
+            <VBox width="250px">
+                <Label text="Target Value"/>
+                <Text text="0.00 AED"/>
+            </VBox>
+
+            <VBox width="250px">
+                <Label text="Quotation Deadline"/>
+                <Text text="03/19/2026"/>
+            </VBox>
+
+        </HBox>
+
+    </uxap:headerContent>
+
+    <!-- SECTIONS -->
+
+    <uxap:sections>
+
+        <!-- GENERAL INFO -->
+
+        <uxap:ObjectPageSection title="General Information">
+
+            <uxap:subSections>
+
+                <uxap:ObjectPageSubSection>
+
+                    <VBox>
+
+                        <Title text="Basic Data"/>
+
+                        <!-- <SimpleForm
+                            editable="false"
+                            layout="ResponsiveGridLayout">
+
+                            <Label text="RFQ Type"/>
+                            <Text text="Int. Sourcing Req (RQ)"/>
+
+                            <Label text="RFQ Description"/>
+                            <Text text="Copy of Reference RFQ"/>
+
+                            <Label text="Language"/>
+                            <Text text="English"/>
+
+                        </SimpleForm> -->
+
+                    </VBox>
+
+                </uxap:ObjectPageSubSection>
+
+            </uxap:subSections>
+
+        </uxap:ObjectPageSection>
+
+        <!-- ITEMS -->
+
+        <uxap:ObjectPageSection title="Items">
+
+            <uxap:subSections>
+
+                <uxap:ObjectPageSubSection>
+
+                    <Table>
+
+                        <columns>
+
+                            <Column>
+                                <Text text="Item"/>
+                            </Column>
+
+                            <Column>
+                                <Text text="Material"/>
+                            </Column>
+
+                            <Column>
+                                <Text text="Quantity"/>
+                            </Column>
+
+                        </columns>
+
+                        <items>
+
+                            <ColumnListItem>
+
+                                <cells>
+                                    <Text text="10"/>
+                                    <Text text="Fire Alarm"/>
+                                    <Text text="5"/>
+                                </cells>
+
+                            </ColumnListItem>
+
+                        </items>
+
+                    </Table>
+
+                </uxap:ObjectPageSubSection>
+
+            </uxap:subSections>
+
+        </uxap:ObjectPageSection>
+
+    </uxap:sections>
+
+</uxap:ObjectPageLayout>
+
+</Page>
 
 </mvc:View>
